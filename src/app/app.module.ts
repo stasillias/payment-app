@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 
 import { StoreModule } from '@ngrx/store';
@@ -17,7 +16,6 @@ import { PaymentModule } from './payment.module';
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule,
     HttpClientModule,
     PaymentModule,
     StoreModule.forRoot([]),
@@ -26,4 +24,4 @@ import { PaymentModule } from './payment.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

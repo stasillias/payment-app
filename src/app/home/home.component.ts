@@ -16,8 +16,7 @@ import { AppState } from '../model/app.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  productName = 'Some Product';
+  productName = 'Product Name';
   amount = 102.03;
   currency = 'EUR';
   date = new Date();
@@ -48,5 +47,4 @@ export class HomeComponent implements OnInit {
       select(paymentInvoiceNumber)
     );
   }
-
 }

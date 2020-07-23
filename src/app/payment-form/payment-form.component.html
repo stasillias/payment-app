@@ -2,8 +2,7 @@
   <div class="payment-form__field">
     <label class="payment-form__label">Card Types:</label>
     <mat-form-field class="payment-form__input">
-      <mat-label>Select Card Type</mat-label>
-      <mat-select formControlName="cardType">
+      <mat-select formControlName="cardType" (selectionChange)="cardTypeChanged()">
         <mat-option *ngFor="let type of (cardTypes$ | async)" [value]="type.value">
           {{type.value}}
         </mat-option>

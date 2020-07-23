@@ -14,9 +14,9 @@ import { selectApplicableCardTypes } from '../payment.selectors';
   styleUrls: ['./payment-form.component.scss']
 })
 export class PaymentFormComponent implements OnInit {
-
   form: FormGroup;
   cardTypes$: Observable<CardType[]>;
+
   constructor(
     private store: Store<AppState>
   ){}
@@ -33,6 +33,10 @@ export class PaymentFormComponent implements OnInit {
     this.cardTypes$ = this.store.pipe(
       select(selectApplicableCardTypes)
     );
+  }
+
+  cardTypeChanged(): void {
+    this.form.controls.cardNumber.updateValueAndValidity();
   }
 
   submitPayment(): void {
