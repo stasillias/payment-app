@@ -1,0 +1,14 @@
+<div class="payment-info">
+  <div class="payment-info__field">
+    <span>Product: </span>
+    <span>{{productName}}</span>
+  </div>
+  <div class="payment-info__field">
+    <span>Date: </span>
+    <span>{{date | date: dateFormat}}</span>
+  </div>
+  <div class="payment-info__field">
+    <span>Amount: </span>
+    <span>{{amount | currency: currency}}</span>
+  </div>
+</div>

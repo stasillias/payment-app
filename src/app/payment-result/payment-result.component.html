@@ -1,0 +1,10 @@
+<div class="payment-result"
+     [ngClass]="{'payment-result--success': isPaymentSuccessful, 'payment-result--fail': !isPaymentSuccessful }">
+  <div>
+    <span>{{message}}</span>
+  </div>
+  <div *ngIf="invoice">
+    <span>Invoice: </span>
+    <span>{{invoice}}</span>
+  </div>
+</div>

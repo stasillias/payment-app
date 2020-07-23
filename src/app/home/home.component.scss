@@ -1,0 +1,8 @@
+@import "../../assets/global.variables";
+
+.home-component {
+  @media (min-width: $desktop-breakpoint) {
+    display: flex;
+    justify-content: space-around;
+  }
+}

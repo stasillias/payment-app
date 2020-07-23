@@ -1,0 +1,37 @@
+@import "../../assets/global.variables";
+
+.payment-form {
+  padding: 16px;
+
+  &__input {
+    margin: 0 0 12px;
+    width: 100%;
+
+    @media (min-width: $desktop-breakpoint) {
+      width: 350px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media (min-width: $desktop-breakpoint) {
+      margin-left: 150px;
+      width: 150px;
+    }
+  }
+
+  &__field {
+    @media (min-width: $desktop-breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__label {
+    @media (min-width: $desktop-breakpoint) {
+      min-width: 150px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

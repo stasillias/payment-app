@@ -1,0 +1,42 @@
+<form [formGroup]="form" class="payment-form">
+  <div class="payment-form__field">
+    <label class="payment-form__label">Card Types:</label>
+    <mat-form-field class="payment-form__input">
+      <mat-label>Select Card Type</mat-label>
+      <mat-select formControlName="cardType">
+        <mat-option *ngFor="let type of (cardTypes$ | async)" [value]="type.value">
+          {{type.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="payment-form__field">
+    <label class="payment-form__label">Card Number</label>
+    <mat-form-field class="payment-form__input">
+      <input matInput formControlName="cardNumber">
+    </mat-form-field>
+  </div>
+  <div class="payment-form__field">
+    <label class="payment-form__label">Expiry</label>
+    <mat-form-field class="payment-form__input">
+      <input matInput formControlName="cardExpiry">
+    </mat-form-field>
+  </div>
+  <div class="payment-form__field">
+    <label class="payment-form__label">Name</label>
+    <mat-form-field class="payment-form__input">
+      <input matInput formControlName="name">
+    </mat-form-field>
+  </div>
+  <div class="payment-form__field">
+    <label class="payment-form__label">Email</label>
+    <mat-form-field class="payment-form__input">
+      <input matInput formControlName="email">
+    </mat-form-field>
+  </div>
+  <button class="payment-form__button"
+          mat-raised-button
+          color="accent"
+          [disabled]="form.invalid"
+          (click)="submitPayment()">Confirm Payment</button>
+</form>

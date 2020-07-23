@@ -1,0 +1,13 @@
+@import "../../assets/global.variables";
+
+.payment-result {
+  padding: 16px;
+
+  &--success {
+    color: $color-blue;
+  }
+
+  &--fail {
+    color: $color-red;
+  }
+}

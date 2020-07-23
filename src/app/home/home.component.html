@@ -1,0 +1,15 @@
+<div class="home-component">
+  <app-payment-info [productName]="productName"
+                    [date]="date"
+                    [dateFormat]="dateFormat"
+                    [amount]="amount"
+                    [currency]="currency">
+  </app-payment-info>
+  <app-payment-form *ngIf="!(isPaymentSubmitted$ | async); else paymentResult"></app-payment-form>
+  <ng-template #paymentResult>
+    <app-payment-result [message]="paymentResponseMessage$ | async"
+                        [invoice]="paymentInvoiceNumber$ | async"
+                        [isPaymentSuccessful]="isPaymentSuccessful$ | async">
+    </app-payment-result>
+  </ng-template>
+</div>
