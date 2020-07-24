@@ -16,7 +16,9 @@ import { selectApplicableCardTypes } from '../payment.selectors';
 export class PaymentFormComponent implements OnInit {
   form: FormGroup;
   cardTypes$: Observable<CardType[]>;
-  private cardExpiryRegExp = new RegExp('^(0[1-9]|1[0-2]|[1-9])\\/(1[4-9]|[2-9][0-9]|20[1-9][1-9])$');
+  cardNumberMask = '0000-0000-0000-0000';
+  expiryMask = '00/00';
+  private cardExpiryRegExp = new RegExp('^(0[1-9]|1[0-2])\\/?([0-9]{4}|[0-9]{2})$');
   private nameRegExp = new RegExp('^[a-zA-Z ]+$');
 
   constructor(

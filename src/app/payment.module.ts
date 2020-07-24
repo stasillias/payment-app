@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from  '@angular/material/input';
 import { MatButtonModule } from  '@angular/material/button';
+import { NgxMaskModule } from 'ngx-mask';
 
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { PaymentInfoComponent } from './payment-info/payment-info.component';
@@ -39,6 +40,7 @@ import { PaymentEffects } from './payment.effects';
     MatButtonModule,
     StoreModule.forFeature('payment', paymentReducer),
     EffectsModule.forFeature([PaymentEffects]),
+    NgxMaskModule.forChild()
   ],
   providers: [
     PaymentHttpService

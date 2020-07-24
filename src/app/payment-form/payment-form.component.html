@@ -12,13 +12,13 @@
   <div class="payment-form__field">
     <label class="payment-form__label">Card Number</label>
     <mat-form-field class="payment-form__input">
-      <input matInput formControlName="cardNumber">
+      <input matInput formControlName="cardNumber" [mask]="cardNumberMask">
     </mat-form-field>
   </div>
   <div class="payment-form__field">
     <label class="payment-form__label">Expiry</label>
     <mat-form-field class="payment-form__input">
-      <input matInput formControlName="cardExpiry">
+      <input matInput formControlName="cardExpiry" [mask]="expiryMask">
     </mat-form-field>
   </div>
   <div class="payment-form__field">
